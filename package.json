@@ -12,7 +12,7 @@
   "scripts": {
     "test": "test",
     "numberguess": "babel-node spec_1/GuessTheNumber.js",
-    "scrabbag": "babel-node spec_2/ScrabBag.js"
+    "scrabbag": "babel-node spec_2/testBag.js"
   },
   "repository": {
     "type": "git",

@@ -30,3 +30,42 @@ export default class ScrabBag {
       _: { count: 2 }
     }
   }
+
+  removeTiles( tileString ) {
+    tileString.split('').forEach( tile => this.tiles[ tile ].count-- )
+  }
+
+  getHighestCount() {
+    return Object.keys( this.tiles )
+      .reduce( ( theCount, tile ) => {
+        if ( this.tiles[ tile ].count > theCount ) {
+          return theCount = this.tiles[ tile ].count
+        }
+        return theCount
+      }, 0 )
+  }
+
+  stackTiles() {
+    const tileStacks = []
+    for ( let x = this.getHighestCount(); x >= 0; x-- ) {
+      let count = Object.keys( this.tiles ).filter( tileFace =>
+        this.tiles[ tileFace ].count === x )
+      tileStacks.push( count )
+    }
+    return tileStacks
+  }
+
+  tileCount() {
+    const tileCount = []
+    this.stackTiles().map( ( tileList, index )=>{
+      if ( ! tileList.length < 1 ) {
+        tileCount.push(
+          `${this.tiles[tileList[0]].count}: ${tileList.map( tile => tile )}`
+          )
+      return tileCount
+      }
+    })
+    return tileCount
+  }
+
+}
