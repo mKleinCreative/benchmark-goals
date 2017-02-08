@@ -1,0 +1,27 @@
+{
+  "name": "benchmark-goals",
+  "version": "1.0.0",
+  "description": "Benchmarking Myself",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-preset-latest": "^6.22.0",
+    "readline-sync": "^1.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "numberguess": "babel-node spec_1/GuessTheNumber.js",
+    "scrabbag": "babel-node spec_2/ScrabBag.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mKleinCreative/benchmark-goals.git"
+  },
+  "author": "Michael Klein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mKleinCreative/benchmark-goals/issues"
+  },
+  "homepage": "https://github.com/mKleinCreative/benchmark-goals#readme"
+}
